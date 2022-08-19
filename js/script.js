@@ -1,23 +1,12 @@
+import { Modal } from './modal.js'
+
 //----Variaveis---//
 
 const form = document.querySelector('form')
 const inputweight = document.querySelector('#weight')
 const inputHeinght = document.querySelector('#height')
 
-//Função em forma de objeto onde podemos colocar dentro de uma variavel
-
-const Modal = {
-  wrapper: document.querySelector('.modal-wrapper'),
-  menssage: document.querySelector('.title span'),
-  buttonClose: document.querySelector('.modal button.close'),
-
-  open() {
-    Modal.wrapper.classList.add('open')
-  },
-  close() {
-    Modal.wrapper.classList.remove('open')
-  }
-}
+//Com o objeto a baixo nós podemos colocar funções ou outro dado no formato chave valor. e acessar tanto a funções quanto variaveis.
 
 form.onsubmit = function (event) {
   event.preventDefault() //removendo o padrão do formulário, para não recarregar a página ao clicae no  submit//
@@ -29,10 +18,6 @@ form.onsubmit = function (event) {
   const message = `Seu IMC é de ${result}`
   Modal.menssage.innerText = message
   Modal.open()
-}
-
-Modal.buttonClose.onclick = () => {
-  Modal.close()
 }
 
 function IMC(weight, height) {

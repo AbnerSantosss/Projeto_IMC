@@ -167,6 +167,7 @@ form button:hover{
   right: 10px;
   cursor: pointer;
   transition: transform .3s;
+  
 }
 
 .modal button:hover{
