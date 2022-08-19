@@ -1,0 +1,211 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+
+:root{
+  font-size: 62.5%;
+
+  --font-famyli: 'Roboto', sans-serif;
+  
+  /*=====COLOS=====*/
+  --color-background-body: #040924;
+  --color-text-title: #0C3440;
+  --color-label: #00453A;
+  --color-text-input: #212529;
+  --color-outline-input: #02799D;
+  --color-bg-input: #DCE2E9;
+  --color-border-input: rgba(73,80,87, 0.3);
+  --color-text-placehouder: #49505780;
+ /*---button-colors----*/
+  --color-button-bg: #02799D;
+  --color-button-text: #FFFFFF;
+  --color-button-bg-hover:#246477;
+
+  --color-erro-bg: #F03E3E;
+  --color-erro-text: #FFFFFF;
+
+
+
+
+}
+
+
+body {
+  background-color: var(--color-background-body);
+  font-family: var(--font-famyli);
+}
+
+
+body,
+input,
+button {
+  font-size: 1.6rem; 
+  line-height: 2rem;/*Aqui estou resetando todo documento, pois se eu setar só no body o 1.6rem não se aplica ao input e button*/
+}
+
+
+
+
+.container{
+  display: grid;
+  height: 100vh;
+  place-content: center; /*Ao ativar o grid libera essa propriedade que centraliza*/
+}
+
+
+.card{
+  padding: 48px 64px 64px;
+  background: white;
+  max-width: 42.8rem;
+  margin-inline: auto; /*vai centralizar o elemento*/
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0.6rem;
+}
+ 
+.title{
+  font-size: 3.2rem;
+  line-height: 4rem;
+}
+form{
+  width: 30rem;
+}
+
+form h1{
+  margin-bottom: 3.2rem;
+}
+
+form label{
+font-size: 1.4rem;
+line-height: 1.8rem;
+color: var(--color-label);
+margin-bottom: .8rem;
+display: block;
+}
+
+form input{
+  width: 100%;
+  border: 1px solid var(--color-border-input);
+  background: var(--color-bg-input);
+  padding: 1.6rem;
+  border-radius: .4rem;
+}
+
+form input:focus{
+  outline: 2px solid var(--color-outline-input);
+
+}
+
+form input::placeholder{
+  color: var(--color-text-placehouder);
+
+}
+
+
+
+.input-wrepper + .input-wrepper { /*Estou dizendo, que uma classe anterior a outra que o margin top nela*/ 
+  margin-top: 1.6rem;
+}
+
+
+form button{
+  margin-top: 3.2rem;
+  padding: 1.6rem;
+  width: 100%;
+
+  border-radius: .4rem;
+  border: none;
+
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  
+
+}
+form button:hover{
+  background: var(--color-button-bg-hover);
+}
+
+/*================MODAL=================*/
+.modal-wrapper.open{
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.modal-wrapper{
+  position: absolute;
+  background: #1e1e1e93;
+  inset: 0; /*vai substituir o margin, botton, left, e top.*/
+  display: grid;
+  place-content: center;
+  opacity: 0;
+  visibility: hidden;
+}
+  
+  
+.modal{
+  position: relative;
+}
+
+
+.modal button {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  cursor: pointer;
+  transition: transform .3s;
+}
+
+.modal button:hover{
+  transform: scale(1.1);
+
+}
+
+.alert-error.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.alert-error{
+  position: absolute;
+  background-color: var(--color-erro-bg);
+  color: var(--color-erro-text);
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: .8rem 0;
+  text-align: center;
+  font-weight: bold;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: transform 1s;
+}
+
+
+
+
+
+ 
+
+  
+
+
+
+
+
+  
