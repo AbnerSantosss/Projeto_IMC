@@ -22,10 +22,10 @@
 
  
 ⬇️Preview ⬇️
-  <p style="text-align:center;">Veja o projeto online clicando <a href="https://calculadoraimcc.netlify.app/">Aqui!</a></p>
+  <p style="text-align:center;">Veja o projeto online clicando <a href="https://calculodeimcc.netlify.app/">Aqui!</a></p>
 
 
-![Design sem nome](https://user-images.githubusercontent.com/107922389/185767559-e2843bf0-a30e-4dda-9af7-25a0eee638ec.gif)
+![Design sem nome (1)](https://user-images.githubusercontent.com/107922389/185768969-b04eb980-dff1-4d4b-90a4-980292151601.gif)
 
 
    <p style="text-align: center;">Por Abner Santos ✨</p>

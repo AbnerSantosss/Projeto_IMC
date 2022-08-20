@@ -8,12 +8,17 @@
     max-width: 31.8rem;
   }
 
-.title {
-  font-size: 2.7rem;
-}
+  .card p {
 
-.title span {
-  font-size: 2.1rem;
-}
- 
+    left: 8.8rem;
+  }
+
+  .title {
+    font-size: 2.7rem;
+  }
+
+  .title span {
+    font-size: 2.1rem;
+  }
+
 }
