@@ -5,13 +5,16 @@ box-sizing: border-box;
 }
 
 
+
 :root{
+ 
   font-size: 62.5%;
 
   --font-famyli: 'Roboto', sans-serif;
   
   /*=====COLOS=====*/
   --color-background-body: #040924;
+  --color-background-card: #ffff;
   --color-text-title: #0C3440;
   --color-label: #00453A;
   --color-text-input: #212529;
@@ -19,33 +22,60 @@ box-sizing: border-box;
   --color-bg-input: #DCE2E9;
   --color-border-input: rgba(73,80,87, 0.3);
   --color-text-placehouder: #49505780;
- /*---button-colors----*/
+ 
+  /*---button-colors----*/
   --color-button-bg: #02799D;
   --color-button-text: #FFFFFF;
   --color-button-bg-hover:#246477;
-
+  
+  /*--card-colors----*/
+  --color-border-card: #246477;
+  /*--card-error----*/
   --color-erro-bg: #F03E3E;
   --color-erro-text: #FFFFFF;
-
-
-
-
+ 
 }
 
+ 
+/*=========Dark-model-variavels-colors==========*/
+
+.dark-active.dark {
+  --color-background-body: #040613;
+  --color-background-card: #323131;
+  --color-text-title: #0bb3eb;
+  --color-label: #0bb3eb;
+  --color-text-input: #cbcbcb;
+  --color-outline-input: #0dc3f3;
+  --color-bg-input: #DCE2E9;
+  --color-border-input: rgb(42 118 200 / 30%);
+  --color-text-placehouder: #9ca1a3;
+
+  /*---button-colors----*/
+  --color-button-bg: #eff8fb;
+  --color-button-text: #0bb3eb;
+  --color-button-bg-hover: #9ca1a3;
+
+  /*--card-colors----*/
+  --color-border-card: #0bb3eb;
+  /*--card-error----*/
+  --color-erro-bg: #0bb3eb;
+  --color-erro-text: #FFFFFF;
+}
 
 body {
+
   background-color: var(--color-background-body);
   font-family: var(--font-famyli);
-}
 
+}
 
 body,
 input,
 button {
-  font-size: 1.6rem; 
-  line-height: 2rem;/*Aqui estou resetando todo documento, pois se eu setar só no body o 1.6rem não se aplica ao input e button*/
+  font-size: 1.6rem;
+  line-height: 2rem;
+  /*Aqui estou resetando todo documento, pois se eu setar só no body o 1.6rem não se aplica ao input e button*/
 }
-
 
 
 
@@ -55,23 +85,46 @@ button {
   place-content: center; /*Ao ativar o grid libera essa propriedade que centraliza*/
 }
 
+  
 
 .card{
   padding: 48px 64px 64px;
-  background: white;
+  background: var(--color-background-card);
   max-width: 42.8rem;
   margin-inline: auto; /*vai centralizar o elemento*/
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 0.6rem;
+  position: relative;
+  border: 1px solid var(--color-border-card);
 }
+
+/*=========DARK-MODEL-SECTION-========*/
+
+.dark-model-teme {
+  cursor: pointer;
+  position: absolute;
+  top: 6px;
+  right: 1.5rem;
+}
+
  
+.hide{
+  display: none;
+}
+
+
 .title{
   font-size: 3.2rem;
   line-height: 4rem;
+  color: var(--color-text-title);
 }
+
+
+/*=========FORM--SECTION==========*/
 form{
-  width: 30rem;
+ width: 30rem;
 }
+
 
 form h1{
   margin-bottom: 3.2rem;
@@ -84,6 +137,7 @@ color: var(--color-label);
 margin-bottom: .8rem;
 display: block;
 }
+
 
 form input{
   width: 100%;
@@ -104,7 +158,6 @@ form input::placeholder{
 }
 
 
-
 .input-wrepper + .input-wrepper { /*Estou dizendo, que uma classe anterior a outra que o margin top nela*/ 
   margin-top: 1.6rem;
 }
@@ -114,34 +167,28 @@ form button{
   margin-top: 3.2rem;
   padding: 1.6rem;
   width: 100%;
-
   border-radius: .4rem;
   border: none;
-
   background-color: var(--color-button-bg);
   color: var(--color-button-text);
-
   display: flex;
   align-items: center;
   justify-content: center;
   gap: .8rem;
-
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
-  
-
 }
+
 form button:hover{
   background: var(--color-button-bg-hover);
 }
 
-/*================MODAL=================*/
+/*====================MODAL=====================*/
 .modal-wrapper.open{
   opacity: 1;
   visibility: visible;
 }
-
 
 .modal-wrapper{
   position: absolute;
@@ -152,13 +199,15 @@ form button:hover{
   opacity: 0;
   visibility: hidden;
 }
-  
-  
+
 .modal{
   position: relative;
 }
-
-
+  
+.title span{
+  font-size: 3.1rem;
+}
+  
 .modal button {
   background: none;
   border: none;
@@ -167,13 +216,13 @@ form button:hover{
   right: 10px;
   cursor: pointer;
   transition: transform .3s;
-  
 }
 
 .modal button:hover{
   transform: scale(1.1);
-
 }
+
+/*====================MODAL-ERROR=====================*/
 
 .alert-error.open {
   visibility: visible;
@@ -196,6 +245,69 @@ form button:hover{
   transform: translateY(-30px);
   transition: transform 1s;
 }
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+
+
 
 
 

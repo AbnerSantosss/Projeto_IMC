@@ -1,6 +1,7 @@
 import { Modal } from './modal.js'
 import { AlertError } from './alert-error.js'
-import { notAumber, calculateIMC } from './funcao.js'
+import { notAumber, calculateIMC } from './functions.js'
+import { DarkModel } from './dark-theme.js'
 
 //----Variaveis---//
 
