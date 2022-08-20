@@ -85,7 +85,7 @@ button {
   place-content: center; /*Ao ativar o grid libera essa propriedade que centraliza*/
 }
 
-  
+/*============CARD-SECTION-========*/
 
 .card{
   padding: 48px 64px 64px;
@@ -97,6 +97,13 @@ button {
   position: relative;
   border: 1px solid var(--color-border-card);
 }
+.card p {
+  position: absolute;
+  bottom: 7px;
+  left: 12.8rem;
+  color: var(--color-text-title);
+}
+
 
 /*=========DARK-MODEL-SECTION-========*/
 
@@ -107,7 +114,7 @@ button {
   right: 1.5rem;
 }
 
- 
+
 .hide{
   display: none;
 }
@@ -120,9 +127,10 @@ button {
 }
 
 
-/*=========FORM--SECTION==========*/
+/*=========FORM--SECTION===============*/
+
 form{
- width: 30rem;
+width: 30rem;
 }
 
 
@@ -147,16 +155,17 @@ form input{
   border-radius: .4rem;
 }
 
+
 form input:focus{
   outline: 2px solid var(--color-outline-input);
 
 }
 
+
 form input::placeholder{
   color: var(--color-text-placehouder);
 
 }
-
 
 .input-wrepper + .input-wrepper { /*Estou dizendo, que uma classe anterior a outra que o margin top nela*/ 
   margin-top: 1.6rem;
@@ -180,15 +189,18 @@ form button{
   transition: 0.3s;
 }
 
+
 form button:hover{
   background: var(--color-button-bg-hover);
 }
 
-/*====================MODAL=====================*/
+/*======================MODAL======================*/
+
 .modal-wrapper.open{
   opacity: 1;
   visibility: visible;
 }
+
 
 .modal-wrapper{
   position: absolute;
