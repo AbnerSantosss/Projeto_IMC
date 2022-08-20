@@ -22,7 +22,7 @@
 
  
 ⬇️Preview ⬇️
-  <p style="text-align:center;">Veja o projeto online clicando <a href="https://calculaimcc.netlify.app/">Aqui!</a></p>
+  <p style="text-align:center;">Veja o projeto online clicando <a href="https://calculadoraimcc.netlify.app/">Aqui!</a></p>
 
 
 ![Design sem nome](https://user-images.githubusercontent.com/107922389/185767559-e2843bf0-a30e-4dda-9af7-25a0eee638ec.gif)
